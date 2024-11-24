@@ -1,11 +1,18 @@
-import './App.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Body from "./components/Body";
+import Home from "./components/Home";
 
 function App() {
   return (
-  <div className=''>
-     Hello world!
-  </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Body/>}>
+          <Route index element={<Home/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
