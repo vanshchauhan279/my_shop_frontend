@@ -9,7 +9,7 @@ const Login = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
-  const [isProfile, setIsprofile] = useState(false);
+  const [isProfile, setIsprofile] = useState(true);
 
   const navigate = useNavigate();
 
