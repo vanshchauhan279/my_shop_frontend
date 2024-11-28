@@ -3,9 +3,9 @@ import React from "react";
 const SideProperties = ({heading, headArr}) => {
     console.log(headArr)
   return (
-    <div className="border-t border-r border-b border-gray-200 pb-2">
+    <div className="border-t border-r border-b border-gray-200 pb-2 pt-5">
       <h1 className="font-medium mb-3">{heading}</h1>
-      <div className="mb-2 overflow-y-auto h-[300px]">
+      <div className="mb-2 overflow-y-auto max-h-[300px]">
         {headArr.map((element, index) => (
           <div className="" key={index}>
             <input type="checkbox" id="brand" className="inline-flex mr-2" />
