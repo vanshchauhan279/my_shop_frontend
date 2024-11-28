@@ -3,7 +3,7 @@ import Login from './Login'
 
 const Home = () => {
   return (
-    <div>
+    <div className='mb-32'>
       <Login/>
     </div>
   )
