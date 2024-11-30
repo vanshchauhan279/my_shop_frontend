@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Sidebar from './Sidebar'
+import HeroSection from './HeroSection'
 
 const Body = () => {
   return (
