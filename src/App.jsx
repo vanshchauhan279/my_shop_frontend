@@ -3,6 +3,8 @@ import "./App.css";
 import Body from "./components/Body";
 import Home from "./components/Home";
 import Products from "./components/Products";
+import Login from "./components/Login";
+import ViewProduct from "./components/ViewProduct";
 
 function App() {
   return (
@@ -10,7 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Body/>}>
           <Route index element={<Home/>}/>
-          <Route path="/product" element={<Products/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/productview" element={<ViewProduct/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -7,7 +7,7 @@ import HeroSection from './HeroSection'
 
 const Body = () => {
   return (
-    <div className='min-h-screen p-0.5'>
+    <div className='min-h-screen p-0.5 '>
       <Navbar/>
         <div className="">
             <Outlet/>

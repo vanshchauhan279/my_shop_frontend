@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const HeroSection = () => {
     const [value, setValue] = useState("");
   return (
-    <div>
+    <div className="p-2">
       <div className="flex justify-between mb-8 mt-3 h-6">
         <div className="dropdown dropdown-hover absolute right-0 mt-2 mr-10 ">
           <div tabIndex={0} role="button" className="btn m-1 min-w-[200px] text-left">

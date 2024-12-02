@@ -3,9 +3,9 @@ import React from "react";
 const Navbar = () => {
   return (
     <>
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar bg-base-100 shadow-sm p-5">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-xl shadow">Women's Mart</a>
         </div>
         <div className="flex-none">
           <div className="dropdown dropdown-end">
@@ -48,7 +48,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className="dropdown dropdown-end">
+          <div className="dropdown dropdown-end group cursor-pointer">
             <div
               tabIndex={0}
               role="button"
@@ -57,13 +57,13 @@ const Navbar = () => {
               <div className="w-10 rounded-full">
                 <img
                   alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScUcTxLM0e260D9L98ModC48AsVnFMGK6CWA&s"
                 />
               </div>
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box absolute right-0 mt-2 w-52 p-2 shadow hidden group-hover:block"
             >
               <li>
                 <a className="justify-between">

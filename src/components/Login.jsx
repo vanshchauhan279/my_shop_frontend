@@ -15,31 +15,34 @@ const Login = () => {
 
   const handleLogin = async () => {
     console.log("login")
-    // try {
-    //   const res = await axios.post("http://localhost:4000/login", {
-    //     gmail: gmail,
-    //     password: password,
-    //   });
-    //   console.log("Login successful:", res.data);
-    // } catch (err) {
-    //   console.error("Login failed:", err);
-    // }
+    try {
+      const res = await axios.post("http://localhost:4000/login", {
+        gmail: gmail,
+        password: password,
+      },{
+        withCredentials: true
+      });
+      console.log("Login successful:", res.data);
+    } catch (err) {
+      
+      console.error("Login failed:", err);
+    }
   };
 
   const handleSignup = async () => {
     console.log("signup")
-    // try {
-    //   const res = await axios.post("http:localhost:4000/signup", {
-    //     name: name,
-    //     gmail: gmail,
-    //     phoneNum: phone,
-    //     password: password,
-    //     address: address,
-    //   });
-    //   console.log(res);
-    // } catch (err) {
-    //   console.log(err);
-    // }
+    try {
+      const res = await axios.post("http://localhost:4000/signup", {
+        name: name,
+        gmail: gmail,
+        phoneNum: phone,
+        password: password,
+        address: address,
+      });
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
