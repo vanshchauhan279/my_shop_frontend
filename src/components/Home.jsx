@@ -1,21 +1,21 @@
-import React from 'react'
-import Login from './Login'
-import Sidebar from './Sidebar'
-import Products from './Products'
-import HeroSection from './HeroSection'
+import React from "react";
+import Login from "./Login";
+import Sidebar from "./Sidebar";
+import Products from "./Products";
+import HeroSection from "./HeroSection";
 
 const Home = () => {
   return (
-    <div className='mb-32 flex'>
-      <div className=''>
-        <Sidebar/>
+    <div className="mb-32 flex">
+      <div className="w-[18%]">
+        <Sidebar />
       </div>
-      <div className='flex-1 ml-1'>
-          <HeroSection/>
-          <Products/>
+      <div className="flex-1 ml-1">
+        <HeroSection />
+        <Products />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

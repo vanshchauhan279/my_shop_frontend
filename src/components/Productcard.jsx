@@ -1,13 +1,13 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import React from "react";
 
-const Productcard = ({ productDetail }) => {
+const Productcard = React.memo(({ productDetail }) => {
   const { Img, BrandName, Category, Sizes, MRP, SellPrice, Discount } =
     productDetail;
-  console.log(Img);
+   
   return (
     <Link to="/productview">
-      <div className="card bg-base-100 w-64 shadow-sm mr-4 mb-3 hover:scale-105 hover:shadow-lg">
+      <div className=" relative card bg-base-100 w-64 shadow-sm mr-4 mb-3 hover: hover:shadow-lg group">
         <figure>
           <img
             src={Img}
@@ -16,12 +16,24 @@ const Productcard = ({ productDetail }) => {
           />
         </figure>
         <div className="card-body">
-          <div>
-            <h2 className="card-title capitalize">{BrandName}</h2>
-            <h3>{Category}</h3>
+          <div
+            className=""
+            onClick={(e) => {
+              e.stopPropagation();
+              e.preventDefault();
+              console.log("whishlist");
+            }}
+          >
+            <div className="absolute border-1 border-gray-200 p-2 text-center opacity-0 group-hover:opacity-100 w-[80%] text-pink-500 font-medium">
+              ❤️ WISHLIST
+            </div>
+            <div className="group-hover:opacity-0">
+              <h2 className="card-title capitalize">{BrandName}</h2>
+              <h3>{Category}</h3>
+            </div>
           </div>
           <div className="flex justify-between">
-            <h3>Rs {SellPrice}</h3>
+            {SellPrice.toLowerCase()!='nan' && <h3>Rs {SellPrice}</h3>}
             <div className="flex">
               {MRP.toLowerCase() != "nan" && <h4>{MRP}</h4>}
               {Discount.toLowerCase() != "nan" && (
@@ -33,6 +45,6 @@ const Productcard = ({ productDetail }) => {
       </div>
     </Link>
   );
-};
+});
 
 export default Productcard;
