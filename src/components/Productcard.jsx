@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import React from "react";
 
 const Productcard = React.memo(({ productDetail }) => {
-  const { Img, BrandName, Category, Sizes, MRP, SellPrice, Discount } =
+  const { _id, Img, BrandName, Category, Sizes, MRP, SellPrice, Discount } =
     productDetail;
-   
+
   return (
-    <Link to="/productview">
+    <Link to={`/productview/${_id}`}>
       <div className=" relative card bg-base-100 w-64 shadow-sm mr-4 mb-3 hover: hover:shadow-lg group">
         <figure>
           <img
@@ -33,7 +33,7 @@ const Productcard = React.memo(({ productDetail }) => {
             </div>
           </div>
           <div className="flex justify-between">
-            {SellPrice.toLowerCase()!='nan' && <h3>Rs {SellPrice}</h3>}
+            {SellPrice.toLowerCase() != "nan" && <h3>Rs {SellPrice}</h3>}
             <div className="flex">
               {MRP.toLowerCase() != "nan" && <h4>{MRP}</h4>}
               {Discount.toLowerCase() != "nan" && (
